@@ -22,21 +22,22 @@
                 android:id="@+id/nameRowTextView"
                 android:layout_width="82dp"
                 android:layout_height="0dp"
-                android:layout_marginStart="36dp"
-                android:layout_marginLeft="36dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="100dp"
                 android:layout_marginTop="45dp"
                 android:layout_marginBottom="45dp"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/coffeeRowTextView"
                 android:layout_width="50dp"
                 android:layout_height="0dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginLeft="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="45dp"
                 android:layout_marginBottom="45dp"
                 android:textSize="14sp"
@@ -48,8 +49,8 @@
                 android:id="@+id/waterRowTextView"
                 android:layout_width="50dp"
                 android:layout_height="0dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginLeft="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="45dp"
                 android:layout_marginBottom="45dp"
                 android:textSize="14sp"
@@ -61,16 +62,39 @@
             <TextView
                 android:id="@+id/milkRowTextView"
                 android:layout_width="50dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginLeft="40dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="45dp"
                 android:layout_marginBottom="45dp"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/waterRowTextView"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/nameRowTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/coffee" />
+
+            <CheckBox
+                android:id="@+id/favoriteCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="175dp"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="5dp"
+                android:background="#FA6B6B"
+                android:checked="false"
+                android:clickable="false"
+                android:text="Favorite "
+                app:layout_constraintStart_toStartOf="@+id/nameRowTextView"
+                app:layout_constraintTop_toBottomOf="@+id/waterRowTextView" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

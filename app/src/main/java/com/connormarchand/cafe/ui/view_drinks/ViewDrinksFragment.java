@@ -59,8 +59,10 @@ public class ViewDrinksFragment extends Fragment {
                         int water = listCursor.getInt(waterIndex);
                         int milkIndex = listCursor.getColumnIndex("MILK");
                         int milk = listCursor.getInt(milkIndex);
+                        int favoriteIndex = listCursor.getColumnIndex("FAVORITE");
+                        int favorite = listCursor.getInt(favoriteIndex);
 
-                        Drink temp = new Drink(id, name, coffee, water, milk);
+                        Drink temp = new Drink(id, name, coffee, water, milk, favorite);
                         listDrinks.add(temp);
                     } catch (IllegalStateException e) {
                         //Do Nothing

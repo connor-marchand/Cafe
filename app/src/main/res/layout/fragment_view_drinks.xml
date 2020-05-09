@@ -9,7 +9,51 @@
         android:id="@+id/viewDrinksListView"
         android:layout_width="409dp"
         android:layout_height="694dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/coffeeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="10dp"
+        android:text="Coffee (ml)"
+        app:layout_constraintBottom_toTopOf="@+id/viewDrinksListView"
+        app:layout_constraintStart_toEndOf="@+id/drinkLabel" />
+
+    <TextView
+        android:id="@+id/waterLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="10dp"
+        android:text="Water (ml)"
+        app:layout_constraintBottom_toTopOf="@+id/viewDrinksListView"
+        app:layout_constraintStart_toEndOf="@+id/coffeeLabel" />
+
+    <TextView
+        android:id="@+id/milkLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="10dp"
+        android:text="Milk (ml)"
+        app:layout_constraintBottom_toTopOf="@+id/viewDrinksListView"
+        app:layout_constraintStart_toEndOf="@+id/waterLabel" />
+
+    <TextView
+        android:id="@+id/drinkLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginBottom="10dp"
+        android:text="Drink Name"
+        app:layout_constraintBottom_toTopOf="@+id/viewDrinksListView"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
@@ -27,6 +28,7 @@ public class AddDrinkFragment extends Fragment {
 
     EditText editName, editCoffee, editWater, editMilk;
     Button addButton, viewDataButton, clearButton;
+    CheckBox favoriteCheckBbox;
     View mView;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -43,6 +45,7 @@ public class AddDrinkFragment extends Fragment {
         editMilk = (EditText) mView.findViewById(R.id.editMilk);
         addButton = (Button) mView.findViewById(R.id.addData);
         clearButton = (Button) mView.findViewById(R.id.clearButton);
+        favoriteCheckBbox = (CheckBox) mView.findViewById(R.id.favoriteCheckBox);
         addData();
         clearData();
         hideSoftKeyboard();
@@ -55,8 +58,10 @@ public class AddDrinkFragment extends Fragment {
                 new View.OnClickListener(){
                     @Override
                     public void onClick(View view){
+                        int favoriteInt;
+                        if(favoriteCheckBbox.isChecked()){favoriteInt = 1;}else{favoriteInt = 0;}
                         boolean isInserted = myDb.insertData(editName.getText().toString(), Integer.parseInt(editCoffee.getText().toString()),
-                                Integer.parseInt(editWater.getText().toString()), Integer.parseInt(editMilk.getText().toString()));
+                                Integer.parseInt(editWater.getText().toString()), Integer.parseInt(editMilk.getText().toString()), favoriteInt);
                         hideSoftKeyboard();
                     }
                 }

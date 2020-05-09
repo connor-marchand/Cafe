@@ -7,13 +7,15 @@ public class Drink {
     int coffee;
     int water;
     int milk;
+    int favorite;
 
-    public Drink(int id, String name, int coffee, int water, int milk) {
+    public Drink(int id, String name, int coffee, int water, int milk, int favorite) {
         this.id = id;
         this.name = name;
         this.coffee = coffee;
         this.water = water;
         this.milk = milk;
+        this.favorite = favorite;
     }
 
     public int getId() {
@@ -54,6 +56,14 @@ public class Drink {
 
     public void setMilk(int milk) {
         this.milk = milk;
+    }
+
+    public int getFavorite() {
+        return favorite;
+    }
+
+    public void setFavorite(int favorite) {
+        this.favorite = favorite;
     }
 
     public String getCoffeeString(){

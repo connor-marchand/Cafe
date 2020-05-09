@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.connormarchand.cafe.R;
@@ -46,11 +47,19 @@ public class DrinkAdapter extends BaseAdapter {
         TextView coffee = convertView.findViewById(R.id.coffeeRowTextView);
         TextView water = convertView.findViewById(R.id.waterRowTextView);
         TextView milk = convertView.findViewById(R.id.milkRowTextView);
+        CheckBox favoriteCheck = convertView.findViewById(R.id.favoriteCheckBox);
 
         name.setText(currentItem.getName());
         coffee.setText(currentItem.getCoffeeString());
         water.setText(currentItem.getWaterString());
         milk.setText(currentItem.getMilkString());
+
+        if(currentItem.getFavorite() == 1){
+            favoriteCheck.setChecked(true);
+        }else{
+            favoriteCheck.setChecked(false);
+        }
+
 
         return convertView;
     }

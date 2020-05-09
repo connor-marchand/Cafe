@@ -77,8 +77,10 @@ public class SearchFragment extends Fragment {
                         int water = cursor.getInt(waterIndex);
                         int milkIndex = cursor.getColumnIndex("MILK");
                         int milk = cursor.getInt(milkIndex);
+                        int favoriteIndex = cursor.getColumnIndex("FAVORITE");
+                        int favorite = cursor.getInt(favoriteIndex);
 
-                        Drink temp = new Drink(id, name, coffee, water, milk);
+                        Drink temp = new Drink(id, name, coffee, water, milk, favorite);
                         searchedDrinks.add(temp);
                     } catch (IllegalStateException e) {
                         //Do Nothing

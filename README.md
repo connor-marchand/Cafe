@@ -1,6 +1,6 @@
-Cafe: CS 449 Semester Project
+**Cafe: CS 449 Semester Project**
 
-This app is designed to be used to save different coffee recipies that you come along and you are able to go back and see what it was made of to possible make it at home.
+- This app is designed to be used to save different coffee recipies that you come along and you are able to go back and see what it was made of to possible make it at home.
 
 First page is the "View Drinks" Page
 
